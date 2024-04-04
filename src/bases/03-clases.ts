@@ -1,16 +1,29 @@
 
-export class Pokemon {
-    public id: number = 1;
-    public name: string = 'no name';
 
-    constructor(id:number , name: string) {
-        this.id = id,
-        this.name = name
+export class Pokemon {
+
+    get imageUrl(): string {
+        return `www.pokemon/image/${this.id}.jpg`;
+    }
+
+    public scream() {
+        console.log(`${bulbasur.name.toUpperCase()}!!!`);
+        this.scream();
+    }
+
+    private speak() {
+        console.log(`${bulbasur.name}, ${bulbasur.name}`);
+        this.speak();
+    }
+
+    constructor(public readonly id: number, public name: string,) {
     }
 
 }
 
 export const bulbasur = new Pokemon(
     3,
-    'Bulbasur'
+    'Bulbasur',
+
 );
+
